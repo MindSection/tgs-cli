@@ -1,12 +1,12 @@
 {
-  "name": "oclif-multi-ts-starter",
-  "description": "oclif-multi-ts-starter",
+  "name": "tgs-cli",
+  "description": "TagSet CLI",
   "version": "0.1.0",
   "author": "AlexanderLapygin @AlexanderLapygin",
   "bin": {
     "mycmd": "./bin/run"
   },
-  "bugs": "https://github.com/softspiders/oclif-multi-ts-starter/issues",
+  "bugs": "https://github.com/MindSection/tgs-cli/issues",
   "dependencies": {
     "@oclif/command": "^1.5.19",
     "@oclif/config": "^1.14.0",
@@ -30,7 +30,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/softspiders/oclif-multi-ts-starter",
+  "homepage": "https://github.com/MindSection/tgs-cli/blob/master/README.md",
   "keywords": [
     "oclif"
   ],
@@ -43,7 +43,10 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "AlexanderLapygin/oclif-multi-ts-starter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MindSection/tgs-cli.git"
+  },
   "scripts": {
     "postpack": "rimraf oclif.manifest.json",
     "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
