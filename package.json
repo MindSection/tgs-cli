@@ -32,7 +32,12 @@
   ],
   "homepage": "https://github.com/MindSection/tgs-cli/blob/master/README.md",
   "keywords": [
-    "oclif"
+    "cli",
+    "MindSection",
+    "node",
+    "tag",
+    "tagset",
+    "tgs"
   ],
   "license": "MIT",
   "main": "lib/index.js",
@@ -48,7 +53,7 @@
     "url": "git+https://github.com/MindSection/tgs-cli.git"
   },
   "scripts": {
-    "postpack": "rimraf oclif.manifest.json",
+    "postpack": "rimraf tgs-cli.json",
     "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "echo NO TESTS",
     "version": "oclif-dev readme && git add README.md"
