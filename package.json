@@ -43,7 +43,7 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "mycmd",
+    "bin": "tgs",
     "plugins": [
       "@oclif/plugin-help"
     ]
