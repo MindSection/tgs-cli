@@ -15,7 +15,7 @@ TagSet CLI
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g tgs-cli
+$ npm install -g
 $ tgs COMMAND
 running command...
 $ tgs (-v|--version|version)
@@ -49,6 +49,8 @@ EXAMPLE
   hello world from ./src/hello.ts!
 ```
 
+_See code: [src\commands\hello.ts](https://github.com/MindSection/tgs-cli/blob/v0.1.0/src\commands\hello.ts)_
+
 ## `tgs help [COMMAND]`
 
 display help for tgs
@@ -64,4 +66,5 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3/src\commands\help.ts)_
 <!-- commandsstop -->
