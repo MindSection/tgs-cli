@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "author": "AlexanderLapygin @AlexanderLapygin",
   "bin": {
-    "mycmd": "./bin/run"
+    "tgs": "./bin/run"
   },
   "bugs": "https://github.com/MindSection/tgs-cli/issues",
   "dependencies": {
