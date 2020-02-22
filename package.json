@@ -8,18 +8,27 @@
   },
   "bugs": "https://github.com/MindSection/tgs-cli/issues",
   "dependencies": {
-    "@oclif/command": "^1.5.19",
-    "@oclif/config": "^1.14.0",
-    "@oclif/plugin-help": "^2.2.3",
-    "tslib": "^1.10.0"
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "tslib": "^1"
   },
   "devDependencies": {
-    "@oclif/dev-cli": "^1.22.2",
-    "@types/node": "^10.17.16",
-    "globby": "^10.0.2",
+    "@oclif/dev-cli": "^1",
+    "@oclif/test": "^1",
+    "@types/chai": "^4",
+    "@types/mocha": "^5",
+    "@types/node": "^10",
+    "chai": "^4",
+    "eslint": "^5.13",
+    "eslint-config-oclif": "^3.1",
+    "eslint-config-oclif-typescript": "^0.1",
+    "globby": "^10",
+    "mocha": "^5",
+    "nyc": "^14",
     "rimraf": "^3.0.2",
-    "ts-node": "^8.6.2",
-    "typescript": "^3.7.5"
+    "ts-node": "^8",
+    "typescript": "^3.3"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -32,12 +41,7 @@
   ],
   "homepage": "https://github.com/MindSection/tgs-cli/blob/master/README.md",
   "keywords": [
-    "cli",
-    "MindSection",
-    "node",
-    "tag",
-    "tagset",
-    "tgs"
+    "oclif"
   ],
   "license": "MIT",
   "main": "lib/index.js",
@@ -53,9 +57,10 @@
     "url": "git+https://github.com/MindSection/tgs-cli.git"
   },
   "scripts": {
-    "postpack": "rimraf tgs-cli.json",
+    "postpack": "rimraf oclif.manifest.json",
+    "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rimraf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
-    "test": "echo NO TESTS",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md"
   },
   "types": "lib/index.d.ts"
