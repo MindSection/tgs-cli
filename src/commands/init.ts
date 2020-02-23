@@ -1,11 +1,11 @@
 import {Command, flags} from '@oclif/command'
 
-export default class Hello extends Command {
+export default class Init extends Command {
   static description = 'describe the command here'
 
   static examples = [
-    `$ tgs hello
-hello world from ./src/hello.ts!
+    `$ tgs init
+init world from ./src/init.ts!
 `,
   ]
 
@@ -20,10 +20,10 @@ hello world from ./src/hello.ts!
   static args = [{name: 'file'}]
 
   async run() {
-    const {args, flags} = this.parse(Hello)
+    const {args, flags} = this.parse(Init)
 
     const name = flags.name || 'world'
-    this.log(`hello ${name} from .\\src\\commands\\hello.ts`)
+    this.log(`init ${name} from .\\src\\commands\\init.ts`)
     if (args.file && flags.force) {
       this.log(`you input --force and --file: ${args.file}`)
     }

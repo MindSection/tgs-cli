@@ -15,7 +15,7 @@ TagSet CLI
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g
+$ npm install -g tgs-cli
 $ tgs COMMAND
 running command...
 $ tgs (-v|--version|version)
@@ -28,26 +28,9 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`tgs hello [FILE]`](#tgs-hello-file)
 * [`tgs help [COMMAND]`](#tgs-help-command)
+* [`tgs init [FILE]`](#tgs-init-file)
 
-## `tgs hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ tgs hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ tgs hello
-  hello world from ./src/hello.ts!
-```
 ## `tgs help [COMMAND]`
 
 display help for tgs
@@ -62,4 +45,26 @@ ARGUMENTS
 OPTIONS
   --all  see all commands in CLI
 ```
+
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3/src\commands\help.ts)_
+
+## `tgs init [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ tgs init [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+
+EXAMPLE
+  $ tgs init
+  init world from ./src/init.ts!
+```
+
+_See code: [src\commands\init.ts](https://github.com/MindSection/tgs-cli/blob/v0.1.0/src\commands\init.ts)_
 <!-- commandsstop -->
