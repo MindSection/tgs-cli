@@ -41,7 +41,9 @@
   ],
   "homepage": "https://github.com/MindSection/tgs-cli/blob/master/README.md",
   "keywords": [
-    "oclif"
+    "cli",
+    "mindsection",
+    "tag"
   ],
   "license": "MIT",
   "main": "lib/index.js",
