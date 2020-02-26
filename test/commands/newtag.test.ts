@@ -1,10 +1,17 @@
 import {expect, test} from '@oclif/test'
 
-describe('The newtag command', () => {
+describe('newtag', () => {
   test
-  .stdout()
-  .command(['newtag'])
-  .it('runs newtag', ctx => {
-    expect(ctx.stdout).to.contain('newtag helloworld')
-  })
+    .stdout()
+    .command(['newtag'])
+    .it('runs newtag', ctx => {
+      expect(ctx.stdout).to.contain('newtag helloworld')
+    })
+
+  test
+    .stdout()
+    .command(['newtag', '--name', 'jeff'])
+    .it('runs newtag --name jeff', ctx => {
+      expect(ctx.stdout).to.contain('newtag jeff')
+    })
 })
