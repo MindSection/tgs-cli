@@ -5,14 +5,14 @@ describe('commands', () => {
     describe('new', () => {
       test
       .stdout()
-      .command(['new'])
+      .command(['tag:new'])
       .it('runs new', ctx => {
         expect(ctx.stdout).to.contain('new helloworld')
       })
 
       test
       .stdout()
-      .command(['new', '--name', 'jeff'])
+      .command(['tag:new', '--name', 'jeff'])
       .it('runs new --name jeff', ctx => {
         expect(ctx.stdout).to.contain('new jeff')
       })
