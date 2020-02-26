@@ -1,11 +1,11 @@
 import {Command, flags} from '@oclif/command'
 
-export default class NewTag extends Command {
+export default class New extends Command {
   static description = 'describe the command here'
 
   static examples = [
-    `$ tgs newtag
-newtag hello world from ./src/newtag.ts!
+    `$ tgs tag:new
+new hello world from ./src/commands/tag/new.ts!
 `,
   ]
 
@@ -20,10 +20,10 @@ newtag hello world from ./src/newtag.ts!
   static args = [{name: 'file'}]
 
   async run() {
-    const {args, flags} = this.parse(NewTag)
+    const {args, flags} = this.parse(New)
 
     const name = flags.name || 'helloworld'
-    this.log(`newtag ${name} from .\\src\\commands\\newtag.ts`)
+    this.log(`new ${name} from .\\src\\commands\\tag\\new.ts`)
     if (args.file && flags.force) {
       this.log(`you input --force and --file: ${args.file}`)
     }

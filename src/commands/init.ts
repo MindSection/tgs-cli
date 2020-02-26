@@ -5,7 +5,7 @@ export default class Init extends Command {
 
   static examples = [
     `$ tgs init
-init world from ./src/init.ts!
+init world from ./src/base-commands/init.ts!
 `,
   ]
 
@@ -23,7 +23,7 @@ init world from ./src/init.ts!
     const {args, flags} = this.parse(Init)
 
     const name = flags.name || 'world'
-    this.log(`init ${name} from .\\src\\commands\\init.ts`)
+    this.log(`init ${name} from .\\src\\base-commands\\init.ts`)
     if (args.file && flags.force) {
       this.log(`you input --force and --file: ${args.file}`)
     }
