@@ -4,10 +4,10 @@ describe('commands', () => {
   describe('tag', () => {
     describe('new', () => {
       test
-      .stdout()
+      .stderr()
       .command(['tag:new'])
       .it('runs new', ctx => {
-        expect(ctx.stdout).to.contain('new helloworld')
+        expect(ctx.stderr).to.contain('Usage:')
       })
 
       test

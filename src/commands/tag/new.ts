@@ -22,10 +22,14 @@ new hello world from ./src/commands/tag/new.ts!
   async run() {
     const {args, flags} = this.parse(NewTag)
 
-    const name = flags.name || 'helloworld'
-    this.log(`new ${name} from .\\src\\commands\\tag\\new.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
+    if (args.length > 0) {
+      const name = flags.name || 'helloworld'
+      this.log(`new ${name} from .\\src\\commands\\tag\\new.ts`)
+      if (args.file && flags.force) {
+        this.log(`you input --force and --file: ${args.file}`)
+      }
+    } else {
+      this.error('Usage: ...')
     }
   }
 }
