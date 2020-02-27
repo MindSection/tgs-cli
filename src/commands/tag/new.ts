@@ -29,7 +29,7 @@ new hello world from ./src/commands/tag/new.ts!
         this.log(`you input --force and --file: ${args.file}`)
       }
     } else {
-      this.error('Usage: ...')
+      this.warn('Usage: ...')
     }
   }
 }
