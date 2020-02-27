@@ -10,6 +10,13 @@ describe('commands', () => {
         expect(ctx.stderr).to.contain('Usage:')
       })
 
+      test
+      .stderr()
+      .command(['nt'])
+      .it('runs new', ctx => {
+        expect(ctx.stderr).to.contain('Usage:')
+      })
+
       // test
       // .stdout()
       // .command(['tag:new', '--name', 'jeff'])

@@ -3,6 +3,11 @@ import {Command, flags} from '@oclif/command'
 export default class NewTag extends Command {
   static description = 'describe the command here'
 
+  static aliases = [
+    'tag:new',
+    'nt',
+  ]
+
   static examples = [
     `$ tgs tag:new
 new hello world from ./src/commands/tag/new.ts!
