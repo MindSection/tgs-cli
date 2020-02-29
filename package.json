@@ -2,7 +2,7 @@
   "name": "tgs-cli",
   "description": "TagSet CLI",
   "version": "0.1.0",
-  "author": "AlexanderLapygin @AlexanderLapygin",
+  "author": "AlexanderLapygin @AlexanderLapygin (https://github.com/AlexanderLapygin)",
   "bin": {
     "tgs": "./bin/run"
   },
