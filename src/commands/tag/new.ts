@@ -3,9 +3,14 @@ import {Command, flags} from '@oclif/command'
 export default class NewTag extends Command {
   static description = 'describe the command here'
 
+  static aliases = [
+    'tag:new',
+    'nt',
+  ]
+
   static examples = [
-    `$ tgs newtag
-newtag hello world from ./src/newtag.ts!
+    `$ tgs tag:new
+new hello world from ./src/commands/tag/new.ts!
 `,
   ]
 
@@ -22,10 +27,14 @@ newtag hello world from ./src/newtag.ts!
   async run() {
     const {args, flags} = this.parse(NewTag)
 
-    const name = flags.name || 'helloworld'
-    this.log(`newtag ${name} from .\\src\\commands\\newtag.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
+    if (args.length > 0) {
+      const name = flags.name || 'helloworld'
+      this.log(`new ${name} from .\\src\\commands\\tag\\new.ts`)
+      if (args.file && flags.force) {
+        this.log(`you input --force and --file: ${args.file}`)
+      }
+    } else {
+      this.warn('Usage: ...')
     }
   }
 }
